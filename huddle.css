@@ -22,18 +22,37 @@ header {
   
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
 .try-it {
   float: right;
-  padding: 1% 3%;
-  border-radius: 40px;
-  background-color: white;
-  font-weight: bold;
-  border: 1px solid white;
-
+  border-radius: 50px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
+
+.try-it:hover {
+  opacity: 0.5;
+}
+
+.try-it:active {
+  color: hsl(0, 0%, 100%);
+} 
 
 .header-flex {
   display: flex;
@@ -60,10 +79,25 @@ h1 {
 
 .get-started {
   background-color:hsl(322, 100%, 66%);
-  padding: 2% 5%;
-  border-radius: 20px;
+  color: white;
   border: none;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 60px;
+  border-radius: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
+
+.get-started:hover {
+  opacity: 0.5;
+}
+
+.get-started:active {
+  opacity: 0.5;
+}
+
 
 .body-flex {
   display: flex;
@@ -72,6 +106,15 @@ h1 {
 }
 
 .body-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4%;
+}
+
+.body-item2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -126,7 +169,7 @@ h1 {
 }
 
 
-/***** footer ****/
+
 footer {
   width: 100%;
   background: hsl(192, 100%, 9%);
@@ -139,8 +182,10 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   
 }
+
 
 .section-1 {
   width: 25%;
@@ -165,17 +210,20 @@ footer {
   display: flex;
 }
 
-.section-4 li {
-  list-style: none;
+.section-4 .fa {
+  text-decoration: none;
+  color: white;
   border: 1px solid white;
   height: 30px;
   width: 30px;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 20px;
   border-radius: 50%;
   margin-right: 5px;
 }
+
+
 .copyright {
   width: 90%;
   text-align: left;
@@ -183,4 +231,27 @@ footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 800px) {
+  .header-flex {
+    flex-direction: column;
+  }
+
+  .header-text {
+    margin-bottom: 80px;
+  }
+
+  .body-items {
+    flex-direction: column;
+  }  
+  
+  .body-item2 {
+    flex-direction: column-reverse;
+  }
+
+  .main-footer {
+    flex-direction: column;
+  }
 }
